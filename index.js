@@ -207,6 +207,22 @@ app.post('/GET-USER', function (req, res) {
   )
 })
 
+//get news
+app.post('/GET-NEWS', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'GET-NEWS',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
 
 //trade one
 app.post('/TRADE-ONE', function (req, res) {
