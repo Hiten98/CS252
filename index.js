@@ -47,10 +47,11 @@ app.use(allowCrossDomain);
 app.use(bodyParser.json());
 
 //routes
-app.get('/LOGIN' , function (req, res) {
+app.get('/' , function (req, res) {
+  console.log('in here');
     request.get(site).on('response', function (response) {
-        console.log(response);
-        res.send(response.body);
+        console.log(response.statusCode);
+        res.send(response.statusCode);
     });
 });
 
