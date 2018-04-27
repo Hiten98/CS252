@@ -48,13 +48,11 @@ app.use(bodyParser.json());
 
 //routes
 app.post('/LOGIN', function (req, res) {
+  var x = req.body;
   request.post(
     site + 'LOGIN',
     {
-      json: {
-        'email': req.body.email,
-        'password': req.body.password
-      }
+      json: x
     },
     function (error, response, body) {
       if (!error && response.statusCode == 200) {
@@ -64,6 +62,143 @@ app.post('/LOGIN', function (req, res) {
     }
   )
 })
+
+//register
+app.post('/REGISTER', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'REGISTER',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//refresh token
+app.post('/REFRESH-TOKEN', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'REFRESH-TOKEN',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//verify token
+app.post('/VERIFY-TOKEN', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'VERIFY-TOKEN',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//update things
+app.post('/UPDATE-THINGS', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'UPDATE-THINGS',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//reset password
+app.post('/RESET-PASSWORD', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'RESET-PASSWORD',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+///get latest values
+app.post('/GET-LATEST-VALUE', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'GET-LATEST-VALUE',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//get graph values
+app.post('/GET-GRAPH-VALUES', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'GET-GRAPH-VALUES',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//get users
+app.post('/GET-USER', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'GET-USER',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
 
 
 app.listen(port, function () {
