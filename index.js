@@ -47,6 +47,13 @@ app.use(allowCrossDomain);
 app.use(bodyParser.json());
 
 //routes
+app.get('/LOGIN' , function (req, res) {
+    request.get(site).on('response', function (response) {
+        console.log(response);
+        res.send(response.body);
+    });
+});
+
 app.post('/LOGIN', function (req, res) {
   var x = req.body;
   request.post(
