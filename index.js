@@ -208,6 +208,74 @@ app.post('/GET-USER', function (req, res) {
 })
 
 
+//trade one
+app.post('/TRADE-ONE', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'TRADE-ONE',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//trade
+app.post('/TRADE', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'TRADE',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//verify trade
+app.post('/VERIFY-TRADE', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'VERIFY-TRADE',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
+//convert
+app.post('/CONVERT', function (req, res) {
+  var x = req.body;
+  request.post(
+    site + 'CONVERT',
+    {
+      json: x
+    },
+    function (error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+        res.send(response.body);
+      }
+    }
+  )
+})
+
 
 app.listen(port, function () {
   console.log("listening on " + port);
