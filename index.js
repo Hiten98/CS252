@@ -12,7 +12,7 @@ var fs = require('fs');
 const morgan = require('morgan');
 
 //site addr
-var site = 'https://52.14.66.192:443/';
+var site = 'http://52.14.66.192:9090/';
 
 //use morgan to log everything
 app.use(morgan('dev'));
