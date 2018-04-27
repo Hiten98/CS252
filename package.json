@@ -1,0 +1,26 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "something",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "npm start"
+  },
+  "keywords": [
+    "sometjih"
+  ],
+  "author": "hiten",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "https": "^1.0.0",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.17.3",
+    "request": "^2.85.0",
+    "start": "^5.1.0"
+  }
+}
